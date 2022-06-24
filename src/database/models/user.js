@@ -24,3 +24,13 @@ module.exports = (sequelize, DataTypes) => {
   });
   return User;
 };
+
+/**
+ * ==============================================================================================
+ */
+
+const UserSchema = (sequelize, DataTypes) => {
+
+}
+
+module.exports = UserSchema;
