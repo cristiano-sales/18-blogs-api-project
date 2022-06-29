@@ -13,3 +13,11 @@ const UserSchema = (sequelize, DataTypes) => {
 };
 
 module.exports = UserSchema;
+
+/**
+ * hasMany, tem muitos
+ * A associação A.hasMany(B) significa que existe
+ * um relacionamento Um-para-Muitos entre A e B,
+ * com a chave estrangeira sendo definida no modelo de destino (B).
+ *  
+ */
