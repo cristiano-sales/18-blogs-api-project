@@ -1,9 +1,9 @@
-const requiredFields = (error) => error;
+const eslintFix = (error) => error;
 
-module.exports = async (req, _res, next) => {
+module.exports = async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    throw requiredFields({
+    throw eslintFix({
      status: 400, message: 'Some required fields are missing',
   });
 }
