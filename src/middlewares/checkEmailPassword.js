@@ -1,7 +1,12 @@
-const emailPassword = require('../schemas/emailPassword');
+const validateUserData = require('../schemas/emailPassword');
 
-module.exports = async (req, _res, next) => {
-    const response = await emailPassword.validateAsync(req.body);
-    console.log(response);
+const eslintFix = (error) => error;
+
+module.exports = async (req, res, next) => {
+    try {
+        await validateUserData.validateAsync(req.body);
+    } catch ({ details }) {
+        throw eslintFix({ status: 400, message: details[0].message });
+    }
     next();
 };
