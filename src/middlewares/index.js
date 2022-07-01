@@ -1,7 +1,13 @@
-const checkEmailPassword = require('./checkEmailPassword');
-const requiredFields = require('./requiredFields');
+const validateUserData = require('./checkEmailPassword');
+const isNotEmpty = require('./requiredFields');
+const authenticate = require('./authentication');
+const validatePostData = require('./validatePost');
+const validatePutData = require('./validatePut');
 
 module.exports = {
-  checkEmailPassword,
-  requiredFields,
+  validateUserData,
+  isNotEmpty,
+  authenticate,
+  validatePostData,
+  validatePutData,
 };
